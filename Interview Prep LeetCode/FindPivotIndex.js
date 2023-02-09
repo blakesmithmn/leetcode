@@ -13,4 +13,5 @@
  */
 var pivotIndex = function (nums) {
 
+
 };

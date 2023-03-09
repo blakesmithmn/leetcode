@@ -9,8 +9,28 @@
 
 /**
  * @param {number[]} nums
- * @return {number}
+ * @return {number}2222
  */
 var pivotIndex = function (nums) {
 
+    // loop through the array
+    // compare the sum of 'left' numbers to 'right' numbers
+    // return index where they are equal
+    // OR return -1 if there isn't a match to requirements
+    let leftSum = 0;
+    let sum = 0;
+
+    for (let i = 0; i < nums.length; i++) {
+        sum += nums[i];
+    }
+
+    for (let i = 0; i < nums.length; i++) {
+        if (leftSum == sum - leftSum - nums[i]) {
+            return i;
+        }
+        leftSum += nums[i];
+    }
+    return -1
+
 };
+
